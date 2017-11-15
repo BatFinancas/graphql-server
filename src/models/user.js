@@ -61,6 +61,7 @@ UserSchema.methods.changePassword = async function (args) {
   this.password = args.newPassword
   // invalidate tokens here
   this.save()
+  return true
 }
 // Export the model
 module.exports = mongoose.model('User', UserSchema)
