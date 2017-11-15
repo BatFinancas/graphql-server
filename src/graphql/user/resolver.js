@@ -2,19 +2,19 @@ import UserModel from '../../models/user'
 
 exports.resolver = {
   Query: {
-    login (_, args) {
+    login (root, args) {
       return UserModel.login(args.credentials)
     },
-    me (_, args, req) {
-      return req.user
+    me (root, args, context) {
+      return context.user
     }
   },
   Mutation: {
-    createUser (_, args) {
+    createUser (root, args) {
       return UserModel.new(args.credentials)
     },
-    changePassword (_, args, req) {
-      return req.user.changePassword(args)
+    changePassword (root, args, context) {
+      return context.user.changePassword(args)
     }
   }
 }

@@ -1,6 +1,5 @@
 exports.schema = `
-type User {
-  id: ID!
+type User inherits Node {
   email: String
 }
 
@@ -17,5 +16,5 @@ me: User
 
 exports.mutation = `
 createUser(credentials: Credentials!) : User
-changePassword(oldPassword: String!, newPassword: String!): User
+changePassword(oldPassword: String!, newPassword: String!): String
 `
