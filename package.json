@@ -1,7 +1,7 @@
 {
   "name": "kit",
   "version": "1.0.0",
-  "description": "Starting point for the Apollo GraphQL Server tutorial.",
+  "description": "Starting point for GraphQL Server.",
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^1.0.3",
@@ -34,12 +34,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelnsantos/apollo-tutorial-kit.git"
+    "url": "git+https://github.com/rafaelnsantos/graphql-server.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rafaelnsantos/apollo-tutorial-kit/issues"
+    "url": "https://github.com/rafaelnsantos/graphql-server/issues"
   },
-  "homepage": "https://github.com/rafaelnsantos/apollo-tutorial-kit#readme"
+  "homepage": "https://github.com/rafaelnsantos/graphql-server#readme"
 }
