@@ -23,7 +23,7 @@ Run mongodb
 git clone https://github.com/rafaelnsantos/graphql-server
 cd apollo-starter-kit
 npm install
-npm run dev
+npm start
 ```
 
 Then open [http://localhost:3000/graphiql](http://localhost:3000/graphql)
