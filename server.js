@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import schema from './schema'
 import context from 'context-middleware'
-import middlewares from './src/middlewares'
+import middlewares from '@/middlewares'
 import './db'
 
 const GRAPHQL_PORT = 3000

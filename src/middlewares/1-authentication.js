@@ -1,4 +1,4 @@
-import UserModel from '../models/user'
+import UserModel from '@/models/user'
 import jwt from 'jsonwebtoken'
 
 module.exports = async function (req, res, next) {
@@ -8,7 +8,6 @@ module.exports = async function (req, res, next) {
   try {
     var teste = await jwt.verify(req.headers.token, 'secret')
   } catch (err) {
-    console.log(err)
     return next()
   }
 
