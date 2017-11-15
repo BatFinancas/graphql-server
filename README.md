@@ -20,7 +20,7 @@ Explanations for [schemaglue](https://github.com/nicolasdao/schemaglue) and [gra
 Run mongodb
 
 ```sh
-git clone https://github.com/rafaelnsantos/apollo-starter-kit
+git clone https://github.com/rafaelnsantos/graphql-server
 cd apollo-starter-kit
 npm install
 npm run dev
