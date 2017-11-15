@@ -7,6 +7,7 @@
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "context-middleware": "^1.0.0",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "graphql": "^0.11.7",
     "graphql-s2s": "^0.3.1",
@@ -29,8 +30,7 @@
     "nodemon": "^1.12.1"
   },
   "scripts": {
-    "test": "npm start",
-    "dev": "nodemon server.js --exec 'eslint --fix --ext .js . && babel-node'"
+    "start": "nodemon server.js --exec 'eslint --fix --ext .js . && babel-node'"
   },
   "repository": {
     "type": "git",
