@@ -5,7 +5,7 @@ import cors from 'cors'
 import schema from './schema'
 import context from 'context-middleware'
 import middlewares from '@/middlewares'
-import './db'
+import '@/config/db'
 
 const GRAPHQL_PORT = 3000
 const graphQLServer = express()
