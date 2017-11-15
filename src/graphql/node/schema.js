@@ -1,5 +1,7 @@
 exports.schema = `
 type Node {
-  id: ID!
+  id: ID
+  createdAt: String
+  updatedAt: String
 }
 `

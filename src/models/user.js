@@ -14,6 +14,8 @@ var UserSchema = new mongoose.Schema({
     type: String,
     required: true
   }
+}, {
+  timestamps: true
 })
 
 // Hash the user's password before saving an user
