@@ -13,6 +13,11 @@ var UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  republica: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Republica',
+    defaul: null
   }
 }, {
   timestamps: true
@@ -31,17 +36,8 @@ UserSchema.pre('save', async function (next) {
   }
 })
 
-UserSchema.statics.new = async function (user) {
-  var newUser = new this(user)
-  newUser = await newUser.save()
-  if (!newUser) {
-    throw new Error('Error adding new user')
-  }
-  return newUser
-}
-
 UserSchema.statics.login = async function (args) {
-  let user = await this.findOne({email: args.email})
+  let user = await this.findOne({email: args.email}).select('password')
 
   if (!user) {
     throw new Error('Check your credentials.')
@@ -65,5 +61,11 @@ UserSchema.methods.changePassword = async function (args) {
   this.save()
   return true
 }
+
+UserSchema.methods.getRepublica = async function () {
+  let republica = await this.model('Republica').findById(this.republica)
+  return republica
+}
+
 // Export the model
 module.exports = mongoose.model('User', UserSchema)
